@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.App-Container {
+  margin-left: 100px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+.App-Table-Input tr td {
+  padding-left : 10px;
+  padding-right : 10px;
+
+}
+.App-Table tr td {
+  padding-left : 10px;
+  padding-right : 10px;
+  border: 1px solid black;
+}
+.Btn-Edit{
+  background-color:#0085FC;
+  color:#FFFFFF;
+  margin-right:'10px';
+}
+.Btn-Remove{
+  background-color:#DB2843;
+  color:#FFFFFF;
 }
