@@ -4,7 +4,7 @@ import Input from './components/Input';
 import List from "./components/List";
 import "./App.css";
 
-function App() {
+function App() { // Creating function-based Components
   const [items, setItems] = useState([
   ]);
 
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App-Container">
       <Header/>
-      <Input add={add} />
+      <Input add={add} /> {/* Passing & Using Props with Components */}
       <br/>
       <List items={items} edit={edit} remove={remove}/>
     </div>

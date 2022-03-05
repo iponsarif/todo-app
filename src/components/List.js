@@ -2,7 +2,7 @@ import Item from './ListItem';
 
 function List({items, edit, remove}) {
   if (items.length < 1) { // Conditional Rendering
-    return null;
+    return null; // Prevent component from rendering
   }
 
   return (
@@ -17,7 +17,7 @@ function List({items, edit, remove}) {
       </tr>
     </thead>
     <tbody>
-      {items.map((item, index) => (
+      {items.map((item, index) => ( /* List & Keys */
         <Item
         key={index}
         index={index}

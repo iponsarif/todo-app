@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Input({ add }) {
+function Input({ add }) { // Passing & Using Props with Components
   const defaultItem = {
     text: "",
     status: "Todo",
@@ -10,10 +10,10 @@ function Input({ add }) {
   };
   const [item, setItem] = useState(defaultItem);
 
-  const handleSubmit = e => {
+  const handleSubmit = e => { // Event Handling
     e.preventDefault();
-    if (!item) return;
-    add(item);
+    if (!item.text) return;
+    add(item); // Passing & Using Props with Components
     setItem(defaultItem);
   };
 
@@ -33,7 +33,7 @@ function Input({ add }) {
       <tbody>
         <tr>
           <td><label>Text</label></td>
-          <td><input type="text" className="input" value={item.text} onChange={e=> setItem({...item, text:e.target.value})} placeholder="Add new todo" /></td>
+          <td><input type="text" className="input" value={item.text} onChange={e => setItem({...item, text:e.target.value})} placeholder="Todo" /></td>
         </tr>
         <tr>
           <td><label>Status</label></td>
@@ -62,7 +62,7 @@ function Input({ add }) {
         <tr>
           <td><label>Color</label></td>
           <td>
-            <input type="color" id="itemColor" name="itemColor" value={item.color} onChange={handleColorChange}/>
+            <input type="color" id="itemColor" name="itemColor" value={item.color} onChange={handleColorChange}/> {/* Attaching event handler in ReactJS */}
           </td>
         </tr>
         <tr>
