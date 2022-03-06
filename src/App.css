@@ -40,22 +40,34 @@
     transform: rotate(360deg);
   }
 }
-.App-Table-Input tr td {
-  padding-left : 10px;
-  padding-right : 10px;
 
+.Btn-Edit {
+  background-color: #0085fc;
+  color: #ffffff;
+  margin-right: 10px;
 }
-.App-Table tr td {
-  padding-left : 10px;
-  padding-right : 10px;
+.Btn-Remove {
+  background-color: #db2843;
+  color: #ffffff;
+}
+
+input[type="radio"] {
+  margin-left: 0;
+}
+
+.Table-Center {
+  display: table;
+  margin: 0 auto;
+}
+
+.Table-Input tr td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Table-Border tr td {
+  padding-left: 10px;
+  padding-right: 10px;
   border: 1px solid black;
-}
-.Btn-Edit{
-  background-color:#0085FC;
-  color:#FFFFFF;
-  margin-right:'10px';
-}
-.Btn-Remove{
-  background-color:#DB2843;
-  color:#FFFFFF;
+  max-width: 50%;
 }

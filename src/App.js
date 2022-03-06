@@ -1,20 +1,30 @@
-import {useState} from "react";
+import { useState } from "react";
 import Header from './components/Header';
 import Input from './components/Input';
 import List from "./components/List";
 import "./App.css";
 
 function App() { // Creating function-based Components
-  const [items, setItems] = useState([
-  ]);
+  const [editItem, setEditItem] = useState(null);
+  const [items, setItems] = useState([]);
+  const [editIndex, setEditIndex] = useState(null);
 
-  const add = item => {
-    const newItems = [...items, item];
-    setItems(newItems);
+  const save = (item, isEdit) => {
+    if (isEdit) {
+      items[editIndex] = item;
+      const newItems = [...items];
+      setItems(newItems);
+    } else {
+      const newItems = [...items, item];
+      setItems(newItems);
+    }
   };
 
   const edit = index => {
-    console.log(index)
+    if (index === null) return;
+    console.log({index});
+    setEditIndex(index);
+    setEditItem({...items[index]});
   }
 
   const remove = index => {
@@ -24,9 +34,9 @@ function App() { // Creating function-based Components
   };
 
   return (
-    <div className="App-Container">
+    <div>
       <Header/>
-      <Input add={add} /> {/* Passing & Using Props with Components */}
+      <Input save={save} editItem={editItem} /> {/* Passing & Using Props with Components */}
       <br/>
       <List items={items} edit={edit} remove={remove}/>
     </div>
