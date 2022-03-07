@@ -71,3 +71,69 @@ input[type="radio"] {
   border: 1px solid black;
   max-width: 50%;
 }
+
+/* paginate */
+.react-paginate {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-paginate li {
+  border-radius: 16px;
+}
+.react-paginate li a {
+  padding: 0 12px;
+  height: 32px;
+  text-align: center;
+  margin: auto 4px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  letter-spacing: 0.01071em;
+
+  line-height: 1.43;
+  font-size: 13px;
+  min-width: 32px;
+}
+
+.react-paginate li:hover {
+  background-color: transparent;
+  cursor: default;
+}
+.react-paginate li:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+.react-paginate li.selected {
+  background-color: grey;
+  color: white;
+}
+
+.react-paginate li.disabled {
+  pointer-events: none;
+}
+
+.react-paginate li.arrow a::before {
+  position: relative;
+  /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+  content: "";
+  /* By using an em scale, the arrows will size with the font */
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  border-right: 0.12em solid black;
+  border-top: 0.12em solid black;
+}
+
+.react-paginate li.arrow.left a {
+  transform: rotate(-135deg) translate(0);
+}
+
+.react-paginate li.arrow.right a {
+  transform: rotate(45deg);
+}
